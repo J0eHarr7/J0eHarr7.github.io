@@ -549,6 +549,28 @@
             position: relative;
             animation: glitch-anim 2s infinite linear alternate-reverse;
         }
+
+        .cyber-text {
+            background: linear-gradient(90deg, #00ff00, #00ffff, #00ff00);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+            animation: cyber-glow 2s ease-in-out infinite;
+        }
+
+        @keyframes cyber-glow {
+            0% {
+                text-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+            }
+            50% {
+                text-shadow: 0 0 20px rgba(0, 255, 0, 0.8),
+                            0 0 30px rgba(0, 255, 255, 0.5);
+            }
+            100% {
+                text-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+            }
+        } 
         
         @keyframes glitch-anim {
             0% { transform: translate(0); }
@@ -666,7 +688,7 @@
     <section class="hero">
         <div class="container">
             <div class="hero-content">
-                <h1 class="glitch">Mouhamed Jouhari</h1>
+                <h1 class="glitch cyber-text">Mouhamed Jouhari</h1>
                 <p class="subtitle">
                     <span class="typing-text" id="typing-text">Cybersecurity Student | Penetration Tester | Bug Bounty Hunter</span>
                 </p>
